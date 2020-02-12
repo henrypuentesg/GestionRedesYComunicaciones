@@ -8,7 +8,7 @@ package Quiz;
 public class Ask {
     int random;
     int initRandom;
-    String[] question = new String[25];
+    String[] question = new String[30];
     static String frage;
 
     public Ask() {
@@ -151,17 +151,38 @@ public class Ask {
                 "$DHCP." +
                 "$3";
 
-        this.question[23] = "En la capa dataLink, se deben armar Bloques de informacion que se son denominados _________" +
-                " los cuales se complementan con una direccion de capa de enlace que se llama Direccion MAC." +
-                "$MAC." +
-                "$Direccion IP." +
-                "$Trama." +
-                "$DHCP." +
+        this.question[23] = "Un delimitador de trama valido puede ser:" +
+                "$Pincipal y secundario." +
+                "$principio y cuenta." +
+                "$El Pipeline." +
+                "$Muestreo." +
+                "$2";
+
+        this.question[24] = "El control de flujo es necesario para no saturar al ________:" +
+                "$DCHP." +
+                "$Emisor." +
+                "$FeedBack." +
+                "$Receptor." +
+                "$4";
+
+        this.question[25] = "La capa que se compone por: Media Access Control MAC y Logical Link Control LLC:" +
+                "$Capa física." +
+                "$Capa de red." +
+                "$Capa de enlace de datos." +
+                "$Capa de aplicación." +
                 "$3";
 
+        this.question[26] = "La tasa de errores de un medio de transmisión se\n" +
+                "mide por la BER (Bit Error Rate) que se define\n" +
+                " donde (BER = bits erróneos / bits transmitidos) el ber tipicopara la fibra es?:" +
+                "$ <10 ^ -12" +
+                "$ <20 ^ -12" +
+                "$ <30 ^ -12" +
+                "$ <50 ^ -12" +
+                "$1";
 
         //
-        frage = this.question[this.random(1, 40)];
+        frage = this.question[this.random(1, 24)];
     }
 
     public int random(int min, int max) {

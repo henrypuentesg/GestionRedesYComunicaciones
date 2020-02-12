@@ -5,8 +5,7 @@
 
 package Quiz;
 
-import java.awt.Component;
-import java.awt.LayoutManager;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Icon;
@@ -36,9 +35,12 @@ public class Quiz_Fenster implements ActionListener {
         this.w1.setDefaultCloseOperation(3);
         this.w1.setVisible(true);
         this.w1.setLayout((LayoutManager)null);
+        //this.w1.getContentPane().setBackground(Color.);
+
         this.ant[0] = new JButton("   ");
         this.ant[0].setBounds(100, 240, 400, 60);
         this.ant[0].addActionListener(this);
+
         this.w1.add(this.ant[0]);
         this.ant[1] = new JButton("   ");
         this.ant[1].setBounds(100, 340, 400, 60);
@@ -52,9 +54,16 @@ public class Quiz_Fenster implements ActionListener {
         this.ant[3].setBounds(100, 540, 400, 60);
         this.ant[3].addActionListener(this);
         this.w1.add(this.ant[3]);
+
+        Font fuente = new Font("Calibri", 3, 16);
+
         this.Area = new JTextArea("Ask");
+        this.Area.setFont(fuente);
+        this.Area.setForeground(Color.black);
+       //this.Area.setBackground(new Color(232,234,246,220));
         this.Area.setBounds(100, 40, 400, 160);
         this.Area.setLineWrap(true);
+
         this.w1.add(this.Area);
         this.b = new JProgressBar(0, 100);
         this.b.setBounds(100, 640, 400, 30);
