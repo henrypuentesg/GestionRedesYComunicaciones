@@ -8,13 +8,8 @@ package Quiz;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JProgressBar;
-import javax.swing.JTextArea;
+import javax.swing.*;
+import javax.swing.text.StyledDocument;
 
 public class Quiz_Fenster implements ActionListener {
     JTextArea Area;
@@ -35,6 +30,8 @@ public class Quiz_Fenster implements ActionListener {
         this.w1.setDefaultCloseOperation(3);
         this.w1.setVisible(true);
         this.w1.setLayout((LayoutManager)null);
+
+
         //this.w1.getContentPane().setBackground(Color.);
 
         this.ant[0] = new JButton("   ");
@@ -54,13 +51,15 @@ public class Quiz_Fenster implements ActionListener {
         this.ant[3].setBounds(100, 540, 400, 60);
         this.ant[3].addActionListener(this);
         this.w1.add(this.ant[3]);
-
         Font fuente = new Font("Calibri", 3, 16);
 
         this.Area = new JTextArea("Ask");
+        Area.setLineWrap(true);
+        Area.setAlignmentY(Component.CENTER_ALIGNMENT);
+
         this.Area.setFont(fuente);
         this.Area.setForeground(Color.black);
-       //this.Area.setBackground(new Color(232,234,246,220));
+        this.Area.setBackground(new Color(237, 239, 244));
         this.Area.setBounds(100, 40, 400, 160);
         this.Area.setLineWrap(true);
 
