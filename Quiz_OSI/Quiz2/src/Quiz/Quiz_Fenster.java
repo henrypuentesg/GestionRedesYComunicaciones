@@ -35,20 +35,20 @@ public class Quiz_Fenster implements ActionListener {
         //this.w1.getContentPane().setBackground(Color.);
 
         this.ant[0] = new JButton("   ");
-        this.ant[0].setBounds(100, 240, 400, 60);
+        this.ant[0].setBounds(100, 220, 400, 60);
         this.ant[0].addActionListener(this);
 
         this.w1.add(this.ant[0]);
         this.ant[1] = new JButton("   ");
-        this.ant[1].setBounds(100, 340, 400, 60);
+        this.ant[1].setBounds(100, 300, 400, 60);
         this.ant[1].addActionListener(this);
         this.w1.add(this.ant[1]);
         this.ant[2] = new JButton("   ");
-        this.ant[2].setBounds(100, 440, 400, 60);
+        this.ant[2].setBounds(100, 380, 400, 60);
         this.ant[2].addActionListener(this);
         this.w1.add(this.ant[2]);
         this.ant[3] = new JButton("   ");
-        this.ant[3].setBounds(100, 540, 400, 60);
+        this.ant[3].setBounds(100, 460, 400, 60);
         this.ant[3].addActionListener(this);
         this.w1.add(this.ant[3]);
         Font fuente = new Font("Calibri", 3, 16);
@@ -65,7 +65,7 @@ public class Quiz_Fenster implements ActionListener {
 
         this.w1.add(this.Area);
         this.b = new JProgressBar(0, 100);
-        this.b.setBounds(100, 640, 400, 30);
+        this.b.setBounds(100, 560, 400, 30);
         this.b.setValue(0);
         this.b.setStringPainted(true);
         this.w1.add(this.b);
